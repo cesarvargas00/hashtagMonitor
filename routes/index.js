@@ -10,4 +10,9 @@ router.get('/bla', function(req, res){
     res.json({bla:'blu'});
 });
 
+router.get('/subscribe', function(req, res){
+    console.log(req.query.hub.challenge);
+    res.send(req.query.hub.challenge);
+});
+
 module.exports = router;
