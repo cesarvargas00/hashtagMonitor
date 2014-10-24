@@ -11,8 +11,8 @@ router.get('/bla', function(req, res){
 });
 
 router.get('/subscribe', function(req, res){
-    console.log(req.query.hub.challenge);
-    res.send(req.query.hub.challenge);
+    console.log(req.query["hub.challenge"]);
+    res.send(req.query["hub.challenge"].toString());
 });
 
 module.exports = router;
