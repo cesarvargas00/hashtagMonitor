@@ -17,7 +17,7 @@ router.get('/subscribe', function(req, res){
 });
 
 router.post('/subscribe', function(req, res){
-    console.log(req.query["hub.challenge"]);
+    console.log(req.body);
     blu = req.body;
     res.send(200);
 });
